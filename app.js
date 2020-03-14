@@ -20,7 +20,8 @@ app.get('/weather', (req, res) => {
         console.log(data); 
         const weather = {
             city: data.location.name,
-            state: data.location.region,
+            region: data.location.region,
+            country: data.location.country,
             time: data.location.localtime,
             icon: data.current.condition.icon,
             weather: data.current.condition.text,
