@@ -1,0 +1,10 @@
+<%- include('./partial/head.ejs') %>
+<div class="wrapper">
+    <h1>Search your city.</h1>
+
+    <form action="/weather" method='GET'>
+        <input type="text" name='search'>
+        <input type="submit">
+    </form>
+</div>
+<%- include('./partial/footer.ejs') %>

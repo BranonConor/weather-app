@@ -1,0 +1,16 @@
+{
+  "name": "covid-19",
+  "version": "1.0.0",
+  "description": "Application that provides real-time information about COVID-19 outbreak statistics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Branon Eusebio",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
