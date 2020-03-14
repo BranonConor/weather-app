@@ -1,16 +1,16 @@
 <%- include('./partial/head.ejs') %>
 <div class="wrapper">
-    <h1><%= weather.city %></h1>
-
-    <h2>Current Weather</h2>
-    <ul>
-        <li><%= weather.time %></li>
-        <li><img src="<%= weather.icon %>" alt=""></li>
-        <li><%= weather.weather %></li>
-        <li><%= weather.temperature %></li>
-        <li><%= weather.wind %></li>
-    </ul>
-    
-    <a href="/">Search another city</a>
+    <div class='weather-card'>
+        <p class='img-wrapper'><img src="<%= weather.icon %>" alt=""></p>
+        <h1><%= weather.city %></h1>
+        <p><%= weather.region %></p>
+        <p><%= weather.country %></p>
+        <h2>Current Weather</h2>
+        <p>Conditions: <%= weather.weather %></p>
+        <p>Temperature: <%= weather.temperature %></p>
+        <p>Wind: <%= weather.wind %></p>
+        
+        <a href="/">Search another city</a>
+    </div>
 </div>
 <%- include('./partial/footer.ejs') %>
