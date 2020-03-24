@@ -1,6 +1,7 @@
 :root {
     --background-color: #F9DBBD;
     --accent-color: #90C3C8;
+    --red: #D86575;
 }
 
 html {
@@ -49,7 +50,7 @@ svg {
     width: 210px;
     height: 35px;
     margin: 20px;
-    background: var(--background-color);
+    background: white;
     color: var(--accent-color);
     font-weight: bolder;
     font-size: 0.8rem;
@@ -58,15 +59,12 @@ svg {
     -o-transition: all .4s ease-in-out;
     -ms-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    border: 1px solid var(--background-color);
     border-radius: 7px;
     cursor: pointer;
     outline: none;
 }
 .wrapper .button:hover {
     transform: translateY(-4px);
-    opacity: 0.8;
-    border: 1px solid var(--accent-color);
 }
 .background-wrap {
     bottom: 0;
@@ -171,6 +169,8 @@ svg {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--red);
+    color: white;
 }
 
 /* ----- CLOUD ANIMATION ------ *?
