@@ -36,6 +36,6 @@ app.get('/weather', (req, res) => {
 
 
 //enable listening for server
-app.listen(8000, process.env.IP, (req, res) => {
-    console.log('Server listening on port 8000');
+app.listen(process.env.PORT, process.env.IP, (req, res) => {
+    console.log('Server listening');
 });
