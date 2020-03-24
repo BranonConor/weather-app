@@ -25,6 +25,21 @@ svg {
     width: 40vw;
     height: 35vw;
 }
+input {
+    -webkit-appearance: none;
+    width: 210px;
+    height: 35px;
+    margin: 20px;
+    background: white;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+}
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -43,25 +58,9 @@ svg {
     margin: 10px 0;
 }
 .wrapper .button {
-    -webkit-appearance: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 210px;
-    height: 35px;
-    margin: 20px;
-    background: white;
     color: var(--accent-color);
     font-weight: bolder;
     font-size: 0.8rem;
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -ms-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    border-radius: 7px;
-    cursor: pointer;
-    outline: none;
 }
 .wrapper .button:hover {
     transform: translateY(-4px);
