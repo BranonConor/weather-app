@@ -13,7 +13,7 @@
         <a href="/">Search another city</a>
     </div>
     <div class='clothing-wrapper'>
-        <% if (<%= weather.weather %> === 'Partly cloudy' || <%= weather.weather %> === 'Cloudy') { %>
+        <% if ((weather.weather === 'Partly cloudy') || (weather.weather === 'Cloudy')) { %>
             <div class='background-wrap'>
                 <div class="x1">
                     <div class="cloud"></div>
