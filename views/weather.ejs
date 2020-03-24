@@ -13,27 +13,28 @@
         <a href="/">Search another city</a>
     </div>
     <div class='clothing-wrapper'>
-        <div class='background-wrap'>
-            <div class="x1">
-                <div class="cloud"></div>
+        <% if (<%= weather.weather %> === 'Partly cloudy' || <%= weather.weather %> === 'Cloudy') { %>
+                <div class="x1">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x2">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x3">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x4">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x5">
+                    <div class="cloud"></div>
+                </div>
             </div>
-        
-            <div class="x2">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x3">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x4">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x5">
-                <div class="cloud"></div>
-            </div>
-        </div>
+        <% } %>
         <!----------- MENS ---------->
         <div class='mens clothing-card'>
             <h2>Men's Clothing Recommendations</h2>
