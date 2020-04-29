@@ -72,7 +72,7 @@ input {
 	right: 0;
 	top: 0;
     z-index: -1;
-    background-color: cadetblue;
+    background-color: var(--accent-color);
 }
 .weather-wrapper {
     width: 100%;
@@ -80,6 +80,8 @@ input {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    background-color: var(--accent-color);
+    overflow-y: scroll;
 }
 .weather-wrapper h1 {
     margin-top: 0;
@@ -135,6 +137,7 @@ input {
     justify-content: flex-start;
     width: 75%;
     height: 100%;
+    margin-left: 350px;
 }
 .clothing-card {
     display: flex;
@@ -144,7 +147,7 @@ input {
     -webkit-box-shadow: 0px 20px 21px -3px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 20px 21px -3px rgba(0,0,0,0.75);
     box-shadow: 0px 20px 21px -3px rgba(0,0,0,0.75);
-    width: 800px;   
+    width: 90%;   
     height: auto;
     padding: 15px 25px;
     margin: 50px 0;
@@ -320,7 +323,7 @@ input {
 
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1200px) {
     .footer {
         flex-direction: column;
         background-color: #c94461;
@@ -331,5 +334,48 @@ input {
     .footer p a {
         text-decoration: none;
         color: aquamarine
+    }
+    .weather-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .clothing-wrapper {
+        margin: 400px 30px 30px 30px;
+    }
+    .weather-card {
+        top: 0;
+        width: 100%;
+        height: 200px;
+        border-radius: 0;
+        padding: 0 0 5px 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .weather-card h1 {
+        font-size: 1.25rem;
+        margin: 5px;
+    }
+    .weather-card h2 {
+        font-size: 1rem;
+        margin: 5px;
+        text-decoration: underline;
+    }
+    .weather-card p {
+        font-size: 0.8rem;
+    }
+    .weather-card a {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        font-size: 0.8rem;
+        margin: 10px;
+        position: absolute;
+        top: 90vh;
     }
 }
