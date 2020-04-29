@@ -168,10 +168,17 @@ input {
 
 .footer {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: var(--red);
-    color: white;
+    background-color: #f2f2f2;
+}
+.footer p {
+    font-size: 0.8rem;
+}
+.footer p a {
+    text-decoration: none;
+    color: var(--red);
 }
 
 /* ----- CLOUD ANIMATION ------ *?
@@ -324,17 +331,6 @@ input {
 
 
 @media only screen and (max-width: 1200px) {
-    .footer {
-        flex-direction: column;
-        background-color: #c94461;
-    }
-    .footer p {
-        font-size: 0.8rem;
-    }
-    .footer p a {
-        text-decoration: none;
-        color: aquamarine
-    }
     .weather-wrapper {
         width: 100%;
         height: 100%;
@@ -375,12 +371,11 @@ input {
         justify-content: center;
         height: 30px;
         width: 300px;
-        font-size: 0.8rem;
+        font-size: 0.95rem;
         margin: 0;
         position: absolute;
-        left: -;
-        top: 90vh;
-        background-color: var(--red);
+        top: 92vh;
+        background-color: orange;
         border: none;
     }
 }
