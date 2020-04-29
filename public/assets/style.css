@@ -372,10 +372,15 @@ input {
     .weather-card a {
         display: flex;
         align-items: center;
+        justify-content: center;
         height: 30px;
+        width: 300px;
         font-size: 0.8rem;
-        margin: 10px;
+        margin: 0;
         position: absolute;
+        left: -;
         top: 90vh;
+        background-color: var(--red);
+        border: none;
     }
 }
