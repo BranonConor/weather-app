@@ -36,6 +36,6 @@ app.get('/weather', (req, res) => {
 
 
 //enable listening for server
-app.listen(process.env.PORT, process.env.IP, (req, res) => {
+app.listen(process.env.PORT || 4000, process.env.IP, (req, res) => {
     console.log('Server listening');
 });
