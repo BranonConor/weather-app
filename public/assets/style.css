@@ -16,6 +16,7 @@ html {
     padding: 0;
     height: auto;
     font-family: 'Bellota Text', cursive;
+    background: var(--light-bg);
 }
 
 body {
@@ -24,8 +25,11 @@ body {
      padding: 0;
 }
 svg {
-    width: 40vw;
-    height: 35vw;
+    background: var(--light-bg);
+    box-shadow: var(--light-shadow), var(--dark-shadow);
+    border: var(--border);
+    border-radius: 30px;
+    padding: 16px;
 }
 input {
     -webkit-appearance: none;
@@ -33,11 +37,6 @@ input {
     height: 35px;
     margin: 20px;
     background: white;
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -ms-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
     border-radius: 7px;
     cursor: pointer;
     outline: none;
@@ -47,8 +46,10 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     width: 100%;
+    padding: 32px 16px;
+    box-sizing: border-box;
 }
 .wrapper form {
     display: flex;
@@ -61,110 +62,167 @@ input {
     margin: 10px 0;
     border-radius: 30px;
     padding: 15px;
-    color: black;
+    color: #888888;
     background-color: var(--light-bg);
     box-shadow: var(--light-shadow), var(--dark-shadow);
     border: var(--border);
     min-height: 50px;
 }
+.wrapper svg {
+    width: 40%;
+    height: 40%;
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+.wrapper .footer {
+    width: 1000px;
+}
 .wrapper .button {
+    font-family: 'Bellota Text', cursive;
     text-align: center;
     margin-top: 25px;
     text-decoration: none;
-    transition: 0.15s ease all;
     border-radius: 30px;
     padding: 15px;
+    font-size: 14px;
     color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     background-color: var(--light-bg);
     box-shadow: var(--light-shadow), var(--dark-shadow);
     border: var(--border);
     min-height: 50px;
+    transition: 0.15s ease all;
 }
 .wrapper .button:hover {
-    transform: translateY(1px);
-    box-shadow: inset var(--dark-shadow), var(--light-shadow);
+    color: orange;
+    box-shadow: none;
 }
 .background-wrap {
     bottom: 0;
 	left: 0;
-	padding-top: 50px;
 	position: fixed;
 	right: 0;
 	top: 0;
     z-index: -1;
     background-color: var(--light-bg);
 }
+.home-content {
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-bg);
+    box-shadow: var(--light-shadow), var(--dark-shadow);
+    border: var(--border);
+    border-radius: 30px;
+    padding: 16px;
+    margin: 32px 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/* ----- MAIN WRAPPER ON RESULTS PAGE -------- */
 .weather-wrapper {
     width: 100%;
-    height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    background-color: var(--light-bg);
+    justify-content: center;
+    background: var(--light-bg);
+    box-sizing: border-box;
+    padding: 32px;
 }
 .weather-wrapper h1 {
-    margin-top: 0;
+    margin: 0;
     font-size: 3rem;
 }
 .weather-card {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    background: #eee;
+    text-align: left;
+    background: var(--light-bg);
     box-shadow: var(--light-shadow), var(--dark-shadow);
-    width: 250px;
-    height: 90%;
-    padding: 15px 25px;
-    position: fixed;
-    left: 15px;
-    top: 50px;
+    width: 100%;
+    height: 200px;
+    padding: 32px;
     box-sizing: border-box;
     border-radius: 30px;
+    position: relative;
+    top: 0;
+    z-index: 10;
+}
+.weather-card .weather-title {
+    padding: 16px;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-right: 4px solid orange;
+}
+.weather-card .weather-image {
+    display: flex;
+}
+.weather-card .weather-image img {
+    border-radius: 30px;
+    background-color: var(--light-bg);
+    box-shadow: var(--light-shadow), var(--dark-shadow);
+    border: var(--border);
+    margin-right: 16px;
+}
+.weather-card .weather-info {
+    display: flex;
+    justify-content: space-between;
+    width: 37%;
 }
 .weather-card h1, .weather-card h2 {
-    text-align: center;
+    margin: 0;
 }
 .weather-card p {
     margin: 0;
-    padding: 0 20px;
 }
 .weather-card a {
     text-align: center;
-    margin-top: 25px;
     text-decoration: none;
     transition: 0.15s ease all;
     border-radius: 30px;
-    padding: 15px;
+    padding: 16px;
+    font-size: 14px;
     color: black;
     background-color: var(--light-bg);
     box-shadow: var(--light-shadow), var(--dark-shadow);
     border: var(--border);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .weather-card a:hover {
-    transform: translateY(1px);
-    box-shadow: inset var(--dark-shadow), var(--light-shadow);
-}
-.img-wrapper {
-    display: flex;
-    justify-content: center;
+    color: orange;
+    box-shadow: none;
 }
 
 
 
 
 
-
+/* ------------- RIGHT SIDE DASHBOARD WITH CLOTHING RECOMMENDATIONS ----------- */
 .clothing-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
     height: 100%;
-    margin-left: 250px;
     box-sizing: border-box;
+    background: var(--light-bg);
+    padding: 32px 0;
 }
 .clothing-card {
     display: flex;
@@ -175,38 +233,85 @@ input {
     -moz-box-shadow: var(--shadow);
     box-shadow: var(--light-shadow), var(--dark-shadow);
     border: var(--border);
-    width: 90%;   
+    width: 50%;   
     height: auto;
-    padding: 15px 25px;
-    margin: 50px 0;
+    padding: 32px;
     border-radius: 30px;
+    box-sizing: border-box;
+}
+.clothing-card .heading {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+}
+.mens {
+    margin: 0 32px 0 0;
 }
 .mens p {
-    width: 95%;
-    margin: 5px 0 25px 0;
+    width: auto;
+    margin: 24px 0 32px 0;
 }
 .mens h3 {
-    margin: 5px 0;
+    width: auto;
+    padding: 8px 16px;
+    color: orange;
+    width: auto;
+    border-radius: 30px;
+    margin: 0 8px;
+    background-color: var(--light-bg);
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--light-shadow), var(--dark-shadow);
+    border: var(--border);
 }
 .mens svg {
     width: 30px;
-    height: auto;
-    margin-bottom: 0;
+    height: 30px;
+    margin: 0 16px 0 0;
+}
+.womens p {
+    width: auto;
+    margin: 24px 0 32px 0;
+}
+.womens h3 {
+    width: auto;
+    padding: 8px 16px;
+    color: orange;
+    width: auto;
+    border-radius: 30px;
+    margin: 0 8px;
+    background-color: var(--light-bg);
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--light-shadow), var(--dark-shadow);
+    border: var(--border);
+}
+.womens svg {
+    width: 30px;
+    height: 30px;
+    margin: 0 16px 0 0;
 }
 
 .footer {
+    box-sizing: border-box;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--light-bg);
+    background: var(--light-bg);
+    box-shadow: var(--light-shadow), var(--dark-shadow);
+    border: var(--border);
+    border-radius: 30px;
+    padding: 16px;
 }
 .footer p {
     font-size: 0.8rem;
 }
 .footer p a {
     text-decoration: none;
-    color: var(--red);
+    color: orange;
 }
 
 /* ----- CLOUD ANIMATION ------ *?
@@ -358,50 +463,88 @@ input {
 
 
 
-@media only screen and (max-width: 1200px) {
-    .weather-wrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+@media only screen and (max-width: 1300px) {
+    .weather-card {
+        height: auto;
     }
+    .weather-card .weather-image {
+        flex-direction: column;
+    }
+    .weather-card .weather-image img {
+        width: 60px;
+        height: 60px;
+    }
+    .weather-card .weather-image h3 {
+        display: none;
+    }
+    .weather-card .weather-info {
+        flex-direction: column;
+        width: auto;
+    }
+}
+@media only screen and (max-width: 1070px) {
+    .wrapper .home-content {
+        width: 100%;
+    }
+    .wrapper .footer {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 900px) {
     .clothing-wrapper {
-        margin: 400px 30px 30px 30px;
+        flex-direction: column;
+        padding-bottom: 0; 
+    }
+    .clothing-card {
+        width: 100%;
+        margin: 32px 0;
+    }
+    .mens {
+        margin: 16px 0;
     }
     .weather-card {
-        top: 0;
-        width: 100%;
-        height: 200px;
-        border-radius: 0;
-        padding: 0 0 5px 0;
-        margin: 0;
-        display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: flex-start;
+    }
+    .weather-card .weather-title {
+        width: auto;
+        border-bottom: 4px solid orange;
+        border-right: none;
+        text-align: center;
         align-items: center;
     }
-    .weather-card h1 {
-        font-size: 1.25rem;
-        margin: 5px;
+    .weather-card .weather-image {
+        width: auto;
+        margin: 16px 0;
     }
-    .weather-card h2 {
-        font-size: 1rem;
-        margin: 5px;
-        text-decoration: underline;
-    }
-    .weather-card p {
-        font-size: 0.8rem;
+    .weather-card .weather-info {
+        width: auto;
+        margin: 8px 0 16px 0;
     }
     .weather-card a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 30px;
-        width: 300px;
-        font-size: 0.95rem;
-        margin: 0;
-        position: absolute;
-        top: 92vh;
+        position: sticky;
+        top: 50px;
+        text-align: center;
+        text-decoration: none;
+        transition: 0.15s ease all;
+        border-radius: 30px;
+        padding: 16px;
+        font-size: 14px;
+        color: black;
+        background-color: var(--light-bg);
+        box-shadow: var(--light-shadow), var(--dark-shadow);
+        border: var(--border);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .weather-card a:hover {
+        color: orange;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .weather-wrapper {
+        padding: 16px;
     }
 }
