@@ -544,6 +544,10 @@ input {
 }
 
 @media only screen and (max-width: 500px) {
+    .background-wrap {
+        width: 100%;
+        height: 100%;
+    }
     .weather-wrapper {
         padding: 16px;
     }
